@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "flutter run -d chrome",
+    "build": "flutter build web",
+    "analyze": "flutter analyze"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^11.3.0",
+    "or": "^0.2.0"
+  }
+ 
+}
