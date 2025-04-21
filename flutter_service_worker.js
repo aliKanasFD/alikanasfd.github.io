@@ -103,9 +103,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "9ba8447a06c70144c1103b2da5e559ad
 "canvaskit/skwasm_st.wasm": "992432bd30da19848811325c264d465f",
 "favicon.png": "aedc5b869ce523e2f271c34f641017b6",
 "flutter.js": "76f08d47ff9f5715220992f993002504",
-"flutter_bootstrap.js": "8964a007168561d8665c700917dd399d",
-"index.html": "68915be290edcf639d4e29474319c604",
-"/": "68915be290edcf639d4e29474319c604",
+"flutter_bootstrap.js": "b69debc52f480902cd1751c3ae6bb309",
+"index.html": "b706ce2e929ed097601f583cbc89591d",
+"/": "b706ce2e929ed097601f583cbc89591d",
 "main.dart.js": "87ef8c9d0d50e8d689ea97c8b24b3d10",
 "manifest.json": "23b242c34d373d2c1985ea81871fe392",
 "version.json": "009c9e65172e010890f7f65fde438006"};
