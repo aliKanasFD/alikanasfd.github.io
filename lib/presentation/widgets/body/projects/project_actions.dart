@@ -104,18 +104,31 @@ class ProjectActions extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(4.0),
-                      child: Image.network(
+                      child: Image.asset(
                         images[index],
                         fit: BoxFit.fitHeight,
+                        frameBuilder:
+                            (context, child, frame, wasSynchronouslyLoaded) {
+                          if (wasSynchronouslyLoaded) {
+                            return child;
+                          }
+                          return AnimatedSwitcher(
+                            duration: Duration(milliseconds: 500),
+                            child: frame != null
+                                ? child
+                                : Container(
+                                    color: Colors.transparent,
+                                    child: Center(
+                                      child: CircularProgressIndicator(
+                                        color: AppColors.primaryColor,
+                                      ),
+                                    ),
+                                  ),
+                          );
+                        },
                         errorBuilder: (context, error, stackTrace) {
                           return const Center(
                             child: Icon(Icons.error),
-                          );
-                        },
-                        loadingBuilder: (context, child, loadingProgress) {
-                          if (loadingProgress == null) return child;
-                          return const Center(
-                            child: CircularProgressIndicator(),
                           );
                         },
                       ),
